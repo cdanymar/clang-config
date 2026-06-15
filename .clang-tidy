@@ -1,0 +1,45 @@
+---
+Checks:
+  - -*
+
+  # standard checks
+  - bugprone-*
+  - cert-*
+  - concurrency-*
+  - cppcoreguidelines-*
+  - hicpp-*
+  - misc-*
+  - modernize-*
+  - performance-*
+  - portability-*
+  - readability-*
+
+  # allow recursion
+  - -misc-no-recursion
+
+  # allow lowercase literal suffixes
+  - -cert-dcl16-c
+  - -hicpp-uppercase-literal-suffix
+  - -readability-uppercase-literal-suffix
+
+  # allow branching statements without braces
+  - -hicpp-braces-around-statements
+  - -readability-braces-around-statements
+  - -readability-inconsistent-ifelse-braces
+
+  # allow typedefs
+  - -hicpp-use-using
+  - -modernize-use-using
+
+  # allow C-style enums
+  - -cppcoreguidelines-use-enum-class
+
+  # allow #if defined()
+  - -readability-use-concise-preprocessor-directives
+
+  # allow #pragma once
+  - -portability-avoid-pragma-once
+
+  # allow goto statements and labels
+  - -cppcoreguidelines-avoid-goto
+  - -hicpp-avoid-goto
