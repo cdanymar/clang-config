@@ -1,191 +1,257 @@
 ---
-Language: ;
-Standard: ;
+Language: Cpp
+Standard: c++20
 
-BasedOnStyle: ;
+BasedOnStyle: LLVM
 
-TabWidth: ;
-UseTab: ;
+TabWidth: 4
+UseTab: Never
 
-IndentWidth: ;
-ContinuationIndentWidth: ;
+IndentWidth: 4
+ContinuationIndentWidth: 4
+BracedInitializerIndentWidth: 4
+ConstructorInitializerIndentWidth: 4
 
-IndentAccessModifiers: ;
-IndentCaseBlocks: ;
-IndentCaseLabels: ;
-IndentExportBlock: ;
-IndentExternBlock: ;
-IndentGotoLabels: ;
-IndentRequiresClause: ;
-IndentWrappedFunctionNames: ;
-LambdaBodyIndentation: ;
-BracedInitializerIndentWidth: ;
-ConstructorInitializerIndentWidth: ;
-RequiresExpressionIndentation: ;
+IndentAccessModifiers: false
+IndentCaseBlocks: false
+IndentCaseLabels: true
+IndentExportBlock: true
+IndentExternBlock: Indent
+IndentGotoLabels: true
+IndentRequiresClause: true
+IndentWrappedFunctionNames: false
+LambdaBodyIndentation: Signature
+RequiresExpressionIndentation: OuterScope
 
-ColumnLimit: ;
+ColumnLimit: 90
 
-AlwaysBreakBeforeMultilineStrings: ;
-BreakAdjacentStringLiterals: ;
-BreakAfterAttributes: ;
-BreakAfterOpenBracketBracedList: ;
-BreakAfterOpenBracketFunction: ;
-BreakAfterOpenBracketIf: ;
-BreakAfterOpenBracketLoop: ;
-BreakAfterOpenBracketSwitch: ;
-BreakAfterReturnType: ;
-BreakArrays: ;
-BreakBeforeBinaryOperators: ;
-BreakBeforeBraces: ;
-BreakBeforeCloseBracketBracedList: ;
-BreakBeforeCloseBracketFunction: ;
-BreakBeforeCloseBracketIf: ;
-BreakBeforeCloseBracketLoop: ;
-BreakBeforeCloseBracketSwitch: ;
-BreakBeforeConceptDeclarations: ;
-BreakBeforeInlineASMColon: ;
-BreakBeforeTemplateCloser: ;
-BreakBeforeTernaryOperators: ;
-BreakBinaryOperations: ;
-BreakConstructorInitializers: ;
-BreakFunctionDefinitionParameters: ;
-BreakInheritanceList: ;
-BreakStringLiterals: ;
-BreakTemplateDeclarations: ;
+AlwaysBreakBeforeMultilineStrings: false
+BreakAdjacentStringLiterals: true
+BreakAfterAttributes: Never
+BreakAfterOpenBracketBracedList: true
+BreakAfterOpenBracketFunction: true
+BreakAfterOpenBracketIf: true
+BreakAfterOpenBracketLoop: true
+BreakAfterOpenBracketSwitch: true
+BreakAfterReturnType: Automatic
+BreakArrays: false
+BreakBeforeBinaryOperators: NonAssignment
 
-BitFieldColonSpacing: ;
-SpaceAfterCStyleCast: ;
-SpaceAfterLogicalNot: ;
-SpaceAfterOperatorKeyword: ;
-SpaceAfterTemplateKeyword: ;
-SpaceAroundPointerQualifiers: ;
-SpaceBeforeAssignmentOperators: ;
-SpaceBeforeCaseColon: ;
-SpaceBeforeCpp11BracedList: ;
-SpaceBeforeCtorInitializerColon: ;
-SpaceBeforeInheritanceColon: ;
-SpaceBeforeJsonColon: ;
-SpaceBeforeParens: ;
-SpaceBeforeParensOptions: ;
-SpaceBeforeRangeBasedForLoopColon: ;
-SpaceBeforeSquareBrackets: ;
-SpaceInEmptyBraces: ;
-SpacesBeforeTrailingComments: ;
-SpacesInAngles: ;
-SpacesInContainerLiterals: ;
-SpacesInLineCommentPrefix: ;
-SpacesInParens: ;
-SpacesInParensOptions: ;
-SpacesInSquareBrackets: ;
+BreakBeforeCloseBracketBracedList: true
+BreakBeforeCloseBracketFunction: true
+BreakBeforeCloseBracketIf: true
+BreakBeforeCloseBracketLoop: true
+BreakBeforeCloseBracketSwitch: true
+BreakBeforeConceptDeclarations: Always
+BreakBeforeInlineASMColon: OnlyMultiline
+BreakBeforeTemplateCloser: true
+BreakBeforeTernaryOperators: true
+BreakBinaryOperations: RespectPrecedence
+BreakConstructorInitializers: BeforeColon
+BreakFunctionDefinitionParameters: true
+BreakInheritanceList: AfterComma
+BreakStringLiterals: true
+BreakTemplateDeclarations: Yes
 
-AlignAfterOpenBracket: ;
-AlignArrayOfStructures: ;
-AlignConsecutiveAssignments: ;
-AlignConsecutiveBitFields: ;
-AlignConsecutiveDeclarations: ;
-AlignConsecutiveMacros: ;
-AlignConsecutiveShortCaseStatements: ;
-AlignEscapedNewlines: ;
-AlignOperands: ;
-AlignTrailingComments: ;
+BreakBeforeBraces: Custom
+BraceWrapping:
+  AfterCaseLabel: false
+  AfterClass: false
+  AfterControlStatement: Never
+  AfterEnum: false
+  AfterFunction: false
+  AfterNamespace: false
+  AfterStruct: false
+  AfterUnion: false
+  AfterExternBlock: false
+  BeforeCatch: true
+  BeforeElse: true
+  BeforeLambdaBody: false
+  BeforeWhile: true
+  IndentBraces: false
+  SplitEmptyFunction: false
+  SplitEmptyRecord: false
+  SplitEmptyNamespace: false
 
-AllowAllArgumentsOnNextLine: ;
-AllowAllParametersOfDeclarationOnNextLine: ;
-AllowBreakBeforeNoexceptSpecifier: ;
-AllowShortBlocksOnASingleLine: ;
-AllowShortCaseExpressionOnASingleLine: ;
-AllowShortCaseLabelsOnASingleLine: ;
-AllowShortCompoundRequirementOnASingleLine: ;
-AllowShortEnumsOnASingleLine: ;
-AllowShortFunctionsOnASingleLine: ;
-AllowShortIfStatementsOnASingleLine: ;
-AllowShortLambdasOnASingleLine: ;
-AllowShortLoopsOnASingleLine: ;
-AllowShortNamespacesOnASingleLine: ;
+BitFieldColonSpacing: Both
+SpaceAfterCStyleCast: false
+SpaceAfterLogicalNot: false
+SpaceAfterOperatorKeyword: true
+SpaceAfterTemplateKeyword: true
+SpaceAroundPointerQualifiers: Before
+SpaceBeforeAssignmentOperators: true
+SpaceBeforeCaseColon: false
+SpaceBeforeCpp11BracedList: true
+SpaceBeforeCtorInitializerColon: true
+SpaceBeforeInheritanceColon: true
+SpaceBeforeJsonColon: false
+SpaceBeforeParens: ControlStatements
+SpaceBeforeRangeBasedForLoopColon: true
+SpaceBeforeSquareBrackets: false
+SpaceInEmptyBraces: Block
+SpacesBeforeTrailingComments: 1
+SpacesInAngles: Never
+SpacesInContainerLiterals: false
+SpacesInLineCommentPrefix:
+  Minimum: 1
+  Maximum: -1
+SpacesInParens: Never
+SpacesInSquareBrackets: false
 
-EmptyLineAfterAccessModifier: ;
-EmptyLineBeforeAccessModifier: ;
-KeepEmptyLines: ;
-MaxEmptyLinesToKeep: ;
-RemoveEmptyLinesInUnwrappedLines: ;
-SeparateDefinitionBlocks: ;
+AlignAfterOpenBracket: false
+AlignArrayOfStructures: Right
+AlignConsecutiveAssignments:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+  AlignCompound: true
+  PadOperators: false
+AlignConsecutiveBitFields:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveDeclarations:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+  AlignFunctionDeclarations: true
+  AlignFunctionPointers: true
+AlignConsecutiveMacros:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+AlignConsecutiveShortCaseStatements:
+  Enabled: true
+  AcrossEmptyLines: false
+  AcrossComments: false
+  AlignCaseArrows: true
+  AlignCaseColons: true
+AlignEscapedNewlines: LeftWithLastLine
+AlignOperands: AlignAfterOperator
+AlignTrailingComments:
+  Kind: Always
+  OverEmptyLines: 2
+  AlignPPAndNotPP: true
 
-BraceWrapping: ;
-Cpp11BracedListStyle: ;
-InsertBraces: ;
-RemoveBracesLLVM: ;
-RemoveParentheses: ;
-RemoveSemicolon: ;
+AllowAllArgumentsOnNextLine: true
+AllowAllParametersOfDeclarationOnNextLine: true
+AllowBreakBeforeNoexceptSpecifier: OnlyWithParen
+AllowShortBlocksOnASingleLine: Empty
+AllowShortCaseExpressionOnASingleLine: true
+AllowShortCaseLabelsOnASingleLine: false
+AllowShortCompoundRequirementOnASingleLine: true
+AllowShortEnumsOnASingleLine: false
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortIfStatementsOnASingleLine: Never
+AllowShortLambdasOnASingleLine: Empty
+AllowShortLoopsOnASingleLine: false
+AllowShortNamespacesOnASingleLine: false
 
-BinPackArguments: ;
-BinPackLongBracedList: ;
-BinPackParameters: ;
-ExperimentalAutoDetectBinPacking: ;
-PackConstructorInitializers: ;
+EmptyLineAfterAccessModifier: Never
+EmptyLineBeforeAccessModifier: LogicalBlock
+KeepEmptyLines:
+  AtEndOfFile: true
+  AtStartOfBlock: false
+  AtStartOfFile: false
+MaxEmptyLinesToKeep: 3
+RemoveEmptyLinesInUnwrappedLines: true
+SeparateDefinitionBlocks: Always
 
-DerivePointerAlignment: ;
-PointerAlignment: ;
-QualifierAlignment: ;
-QualifierOrder: ;
-ReferenceAlignment: ;
-TemplateNames: ;
-TypeNames: ;
-VariableTemplates: ;
+Cpp11BracedListStyle: Block
+InsertBraces: false
+RemoveBracesLLVM: false
+RemoveParentheses: ReturnStatement
+RemoveSemicolon: true
 
-AttributeMacros: ;
-ForEachMacros: ;
-IfMacros: ;
-IndentPPDirectives: ;
-MacroBlockBegin: ;
-MacroBlockEnd: ;
-Macros: ;
-MacrosSkippedByRemoveParentheses: ;
-NamespaceMacros: ;
-PPIndentWidth: ;
-SkipMacroDefinitionBody: ;
-StatementAttributeLikeMacros: ;
-StatementMacros: ;
-TypenameMacros: ;
-WhitespaceSensitiveMacros: ;
+BinPackArguments: false
+BinPackLongBracedList: false
+BinPackParameters: AlwaysOnePerLine
+PackConstructorInitializers: Never
 
-IncludeBlocks: ;
-IncludeCategories: ;
-IncludeIsMainRegex: ;
-IncludeIsMainSourceRegex: ;
-MainIncludeChar: ;
-SortIncludes: ;
+DerivePointerAlignment: false
+PointerAlignment: Left
+QualifierAlignment: Custom
+QualifierOrder:
+  - static
+  - inline
+  - friend
+  - constexpr
+  - const
+  - volatile
+  - restrict
+  - type
+ReferenceAlignment: Left
 
-CommentPragmas: ;
-FixNamespaceComments: ;
-OneLineFormatOffRegex: ;
-ReflowComments: ;
+AttributeMacros:
+  - api
+IndentPPDirectives: AfterHash
+PPIndentWidth: 3
+SkipMacroDefinitionBody: false
 
-AccessModifierOffset: ;
-CompactNamespaces: ;
-NamespaceIndentation: ;
-ShortNamespaceLines: ;
-WrapNamespaceBodyWithEmptyLines: ;
+IncludeBlocks: Preserve
+IncludeCategories:
+  - Regex: '^"([^/]+/)*'
+    Priority: 0
+  - Regex: '^<.*\.h>'
+    Priority: 1
+  - Regex: '^<.*'
+    Priority: 1
+  - Regex: '^(<|")(boost|Qt|glm|glfw|glew|fmt|json|etc)/.*'
+    Priority: 2
+  - Regex: '.*'
+    Priority: 3
+MainIncludeChar: Quote
+SortIncludes:
+  Enabled: true
+  IgnoreCase: false
+  IgnoreExtension: true
 
-EnumTrailingComma: ;
-InsertNewlineAtEOF: ;
-InsertTrailingCommas: ;
-IntegerLiteralSeparator: ;
-KeepFormFeed: ;
-LineEnding: ;
-NumericLiteralCase: ;
-RawStringFormats: ;
-RequiresClausePosition: ;
-SortUsingDeclarations: ;
+FixNamespaceComments: false
+OneLineFormatOffRegex: "(NOLINT)"
+ReflowComments: Never
 
-PenaltyBreakAssignment: ;
-PenaltyBreakBeforeFirstCallParameter: ;
-PenaltyBreakBeforeMemberAccess: ;
-PenaltyBreakComment: ;
-PenaltyBreakFirstLessLess: ;
-PenaltyBreakOpenParenthesis: ;
-PenaltyBreakScopeResolution: ;
-PenaltyBreakString: ;
-PenaltyBreakTemplateDeclaration: ;
-PenaltyExcessCharacter: ;
-PenaltyIndentedWhitespace: ;
-PenaltyReturnTypeOnItsOwnLine: ;
+AccessModifierOffset: -2
+CompactNamespaces: false
+NamespaceIndentation: All
+ShortNamespaceLines: 1
+WrapNamespaceBodyWithEmptyLines: Never
+
+EnumTrailingComma: Insert
+InsertNewlineAtEOF: true
+IntegerLiteralSeparator:
+  Binary: 4
+  BinaryMinDigitsInsert: 9
+  BinaryMaxDigitsRemove: 8
+  Decimal: 3
+  DecimalMinDigitsInsert: 7
+  DecimalMaxDigitsRemove: 6
+  Hex: 2
+  HexMinDigitsInsert: 7
+  HexMaxDigitsRemove: 6
+KeepFormFeed: false
+LineEnding: LF
+NumericLiteralCase:
+  ExponentLetter: Lower
+  HexDigit: Upper
+  Prefix: Lower
+  Suffix: Lower
+RawStringFormats:
+  - Language: Json
+    Delimiters:
+      - "JSON"
+    BasedOnStyle: llvm
+RequiresClausePosition: OwnLine
+SortUsingDeclarations: LexicographicNumeric
+
+PenaltyBreakAssignment: 500
+PenaltyBreakBeforeFirstCallParameter: 100
+PenaltyBreakBeforeMemberAccess: 100
+PenaltyBreakComment: 300
+PenaltyBreakFirstLessLess: 120
+PenaltyBreakOpenParenthesis: 0
+PenaltyBreakScopeResolution: 500
+PenaltyBreakString: 1000
+PenaltyBreakTemplateDeclaration: 10
+PenaltyExcessCharacter: 10000
+PenaltyIndentedWhitespace: 0
+PenaltyReturnTypeOnItsOwnLine: 500
