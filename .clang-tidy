@@ -43,3 +43,72 @@ Checks:
   # allow goto statements and labels
   - -cppcoreguidelines-avoid-goto
   - -hicpp-avoid-goto
+
+CheckOptions:
+  # cognitive function complexity
+  readability-function-size.LineThreshold: 80
+  readability-function-size.StatementThreshold: 50
+  readability-function-size.BranchThreshold: 20
+  readability-function-size.ParameterThreshold: 5
+  readability-function-size.NestingThreshold: 4
+  readability-function-size.VariableThreshold: 15
+  readability-function-cognitive-complexity.IgnoreMacros: true
+
+  # ignore specific magic numbers and files
+  cppcoreguidelines-avoid-magic-numbers.IgnoredIntegerValues: '0;1;-1;2;3;42'
+  readability-magic-numbers.IgnoredIntegerValues: '0;1;-1;2;3;42'
+  cppcoreguidelines-avoid-magic-numbers.IgnoredFloatingPointValues: '0.0;1.0'
+  readability-magic-numbers.IgnoredFloatingPointValues: '0.0;1.0'
+  readability-magic-numbers.IgnoredPaths: 'test'
+
+  # lint comments
+  bugprone-argument-comment.StrictMode: true
+
+  # allow virtual destructors in polymorphic classes instead of override/final
+  modernize-use-override.IgnoreDestructors: true
+  hicpp-use-override.IgnoreDestructors: true
+  cppcoreguidelines-explicit-virtual-functions.IgnoreDestructors: true
+
+  # allow specific single-letter loop variable names
+  readability-identifier-length.IgnoredLoopCounterNames: 'i;j;k;l;m;n'
+
+  # general naming rules
+  readability-identifier-naming.IgnoreMainLikeFunctions: true
+  readability-identifier-naming.DefaultCase: lower_case
+
+  # macros
+  readability-identifier-naming.MacroDefinitionCase: aNy_CasE
+
+  # namespaces
+  readability-identifier-naming.NamespaceCase: lower_case
+
+  # types
+  readability-identifier-naming.ClassCase: CamelCase
+  readability-identifier-naming.ClassIgnoredRegexp: '^[a-z0-9_]+(_error|_exception)$'
+  readability-identifier-naming.StructCase: CamelCase
+  readability-identifier-naming.UnionCase: CamelCase
+
+  # enums
+  readability-identifier-naming.EnumCase: CamelCase
+  readability-identifier-naming.ScopedEnumConstantCase: camelBack
+  readability-identifier-naming.EnumConstantCase: camelBack
+
+  # members
+  readability-identifier-naming.MemberCase: camelBack
+  readability-identifier-naming.PrivateMemberPrefix: m_
+  readability-identifier-naming.ProtectedMemberPrefix: m_
+  readability-identifier-naming.ClassConstantCase: camelBack
+  readability-identifier-naming.MethodCase: camelBack
+  readability-identifier-naming.MethodIgnoredRegexp: '^(get_|set_)?[a-z][a-zA-Z0-9]*(_impl)?$'
+
+  # templates
+  readability-identifier-naming.ConceptCase: camelBack
+  readability-identifier-naming.TemplateParameterCase: CamelCase
+
+  # globals
+  readability-identifier-naming.GlobalFunctionCase: lower_case
+  readability-identifier-naming.GlobalVariableCase: lower_case
+
+  # locals
+  readability-identifier-naming.VariableCase: camelBack
+  readability-identifier-naming.ParameterCase: camelBack
