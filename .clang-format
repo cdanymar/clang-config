@@ -23,7 +23,7 @@ IndentWrappedFunctionNames: false
 LambdaBodyIndentation: Signature
 RequiresExpressionIndentation: OuterScope
 
-ColumnLimit: 90
+ColumnLimit: 0
 
 AlwaysBreakBeforeMultilineStrings: false
 BreakAdjacentStringLiterals: true
@@ -165,7 +165,7 @@ RemoveSemicolon: true
 
 BinPackArguments: false
 BinPackLongBracedList: false
-BinPackParameters: AlwaysOnePerLine
+BinPackParameters: BinPack
 PackConstructorInitializers: Never
 
 DerivePointerAlignment: false
