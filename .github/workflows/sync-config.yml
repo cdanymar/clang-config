@@ -1,0 +1,51 @@
+name: Sync Configs to Downstream Repos
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.clang-format'
+      - '.clang-tidy'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        target_repo:
+          - 'cdanymar/hello-world'
+
+    steps:
+      - name: Checkout downstream repository
+        uses: actions/checkout@v6
+        with:
+          repository: ${{ matrix.target_repo }}
+          token: ${{ secrets.CLANG_CONFIG_SYNC }}
+          path: downstream-repo
+
+      - name: Checkout central config repository
+        uses: actions/checkout@v6
+        with:
+          path: config-repo
+
+      - name: Copy config files
+        run: |
+          cp config-repo/.clang-format downstream-repo/
+          cp config-repo/.clang-tidy downstream-repo/
+
+      - name: Create Pull Request in downstream repository
+        uses: peter-evans/create-pull-request@v6
+        with:
+          path: downstream-repo
+          token: ${{ secrets.CLANG_CONFIG_SYNC }}
+          commit-message: "chore(config): sync .clang-format and .clang-tidy from cdanymar/clang-config"
+          title: "Update .clang-format and .clang-tidy"
+          body: |
+            Automated Pull Request synchronizing the latest style guidelines from the configuration repository (cdanymar/clang-config).
+
+            Please review and merge to ensure code formatting stays consistent.
+          branch: "chore/sync-clang-configs"
+          delete-branch: true
