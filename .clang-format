@@ -4,30 +4,17 @@ Standard: c++20
 
 BasedOnStyle: LLVM
 
-TabWidth: 4
-UseTab: Never
-
-IndentWidth: 4
-ContinuationIndentWidth: 4
-BracedInitializerIndentWidth: 4
-ConstructorInitializerIndentWidth: 4
-
-IndentAccessModifiers: false
-IndentCaseBlocks: false
-IndentCaseLabels: true
-IndentExportBlock: true
-IndentExternBlock: Indent
-IndentGotoLabels: true
-IndentRequiresClause: true
-IndentWrappedFunctionNames: false
-LambdaBodyIndentation: Signature
-RequiresExpressionIndentation: OuterScope
-
 ColumnLimit: 0
 
-AlwaysBreakBeforeMultilineStrings: false
-BreakAdjacentStringLiterals: true
-BreakAfterAttributes: Never
+TabWidth: 4
+IndentWidth: 4
+BracedInitializerIndentWidth: 4
+AccessModifierOffset: -2
+
+IndentCaseLabels: true
+IndentExternBlock: Indent
+IndentRequiresClause: true
+
 BreakAfterOpenBracketBracedList: true
 BreakAfterOpenBracketFunction: true
 BreakAfterOpenBracketIf: true
@@ -42,15 +29,10 @@ BreakBeforeCloseBracketFunction: true
 BreakBeforeCloseBracketIf: true
 BreakBeforeCloseBracketLoop: true
 BreakBeforeCloseBracketSwitch: true
-BreakBeforeConceptDeclarations: Always
-BreakBeforeInlineASMColon: OnlyMultiline
 BreakBeforeTemplateCloser: true
-BreakBeforeTernaryOperators: true
 BreakBinaryOperations: RespectPrecedence
-BreakConstructorInitializers: BeforeColon
 BreakFunctionDefinitionParameters: true
 BreakInheritanceList: AfterComma
-BreakStringLiterals: true
 BreakTemplateDeclarations: Yes
 
 BreakBeforeBraces: Custom
@@ -73,30 +55,11 @@ BraceWrapping:
   SplitEmptyRecord: false
   SplitEmptyNamespace: false
 
-BitFieldColonSpacing: Both
-SpaceAfterCStyleCast: false
-SpaceAfterLogicalNot: false
 SpaceAfterOperatorKeyword: true
-SpaceAfterTemplateKeyword: true
 SpaceAroundPointerQualifiers: Before
-SpaceBeforeAssignmentOperators: true
-SpaceBeforeCaseColon: false
 SpaceBeforeCpp11BracedList: true
-SpaceBeforeCtorInitializerColon: true
-SpaceBeforeInheritanceColon: true
-SpaceBeforeJsonColon: false
-SpaceBeforeParens: ControlStatements
-SpaceBeforeRangeBasedForLoopColon: true
-SpaceBeforeSquareBrackets: false
 SpaceInEmptyBraces: Block
-SpacesBeforeTrailingComments: 1
-SpacesInAngles: Never
 SpacesInContainerLiterals: false
-SpacesInLineCommentPrefix:
-  Minimum: 1
-  Maximum: -1
-SpacesInParens: Never
-SpacesInSquareBrackets: false
 
 AlignAfterOpenBracket: false
 AlignArrayOfStructures: Right
@@ -133,42 +96,28 @@ AlignTrailingComments:
   OverEmptyLines: 2
   AlignPPAndNotPP: true
 
-AllowAllArgumentsOnNextLine: true
-AllowAllParametersOfDeclarationOnNextLine: true
 AllowBreakBeforeNoexceptSpecifier: OnlyWithParen
 AllowShortBlocksOnASingleLine: Empty
-AllowShortCaseExpressionOnASingleLine: true
-AllowShortCaseLabelsOnASingleLine: false
-AllowShortCompoundRequirementOnASingleLine: true
 AllowShortEnumsOnASingleLine: false
 AllowShortFunctionsOnASingleLine: Empty
-AllowShortIfStatementsOnASingleLine: Never
 AllowShortLambdasOnASingleLine: Empty
-AllowShortLoopsOnASingleLine: false
-AllowShortNamespacesOnASingleLine: false
 
-EmptyLineAfterAccessModifier: Never
-EmptyLineBeforeAccessModifier: LogicalBlock
 KeepEmptyLines:
   AtEndOfFile: true
   AtStartOfBlock: false
   AtStartOfFile: false
-MaxEmptyLinesToKeep: 3
+MaxEmptyLinesToKeep: 5
 RemoveEmptyLinesInUnwrappedLines: true
 SeparateDefinitionBlocks: Always
 
 Cpp11BracedListStyle: Block
-InsertBraces: false
-RemoveBracesLLVM: false
 RemoveParentheses: ReturnStatement
 RemoveSemicolon: true
 
 BinPackArguments: false
 BinPackLongBracedList: false
-BinPackParameters: BinPack
 PackConstructorInitializers: Never
 
-DerivePointerAlignment: false
 PointerAlignment: Left
 QualifierAlignment: Custom
 QualifierOrder:
@@ -186,9 +135,7 @@ AttributeMacros:
   - api
 IndentPPDirectives: AfterHash
 PPIndentWidth: 3
-SkipMacroDefinitionBody: false
 
-IncludeBlocks: Preserve
 IncludeCategories:
   - Regex: '^"([^/]+/)*'
     Priority: 0
@@ -196,11 +143,10 @@ IncludeCategories:
     Priority: 1
   - Regex: '^<.*'
     Priority: 1
-  - Regex: '^(<|")(boost|Qt|glm|glfw|glew|fmt|json|etc)/.*'
+  - Regex: '^(<|")(boost|Qt|glm|glfw|glew|fmt|json|gtest|etc)/.*'
     Priority: 2
   - Regex: '.*'
     Priority: 3
-MainIncludeChar: Quote
 SortIncludes:
   Enabled: true
   IgnoreCase: false
@@ -210,10 +156,7 @@ FixNamespaceComments: false
 OneLineFormatOffRegex: "(NOLINT)"
 ReflowComments: Never
 
-AccessModifierOffset: -2
-CompactNamespaces: false
 NamespaceIndentation: All
-ShortNamespaceLines: 1
 WrapNamespaceBodyWithEmptyLines: Never
 
 EnumTrailingComma: Insert
@@ -228,7 +171,6 @@ IntegerLiteralSeparator:
   Hex: 2
   HexMinDigitsInsert: 7
   HexMaxDigitsRemove: 6
-KeepFormFeed: false
 LineEnding: LF
 NumericLiteralCase:
   ExponentLetter: Lower
@@ -240,8 +182,6 @@ RawStringFormats:
     Delimiters:
       - "JSON"
     BasedOnStyle: llvm
-RequiresClausePosition: OwnLine
-SortUsingDeclarations: LexicographicNumeric
 
 PenaltyBreakAssignment: 500
 PenaltyBreakBeforeFirstCallParameter: 100
