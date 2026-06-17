@@ -38,7 +38,7 @@ jobs:
           cp config-repo/.clang-tidy downstream-repo/
 
       - name: Create Pull Request in downstream repository
-        uses: peter-evans/create-pull-request@v6
+        uses: peter-evans/create-pull-request@v8
         with:
           path: downstream-repo
           token: ${{ secrets.CLANG_CONFIG_SYNC }}
