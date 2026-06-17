@@ -25,6 +25,7 @@ jobs:
           repository: ${{ matrix.target_repo }}
           token: ${{ secrets.CLANG_CONFIG_SYNC }}
           path: downstream-repo
+          persist-credentials: false
 
       - name: Checkout central config repository
         uses: actions/checkout@v6
