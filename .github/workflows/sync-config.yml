@@ -17,6 +17,7 @@ jobs:
       matrix:
         target_repo:
           - 'cdanymar/hello-world'
+          - 'cdanymar/cpp-multitarget'
 
     steps:
       - name: Checkout downstream repository
